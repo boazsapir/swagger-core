@@ -104,6 +104,9 @@ public class PropertyBuilder {
         .maxLength(maxLength)
         .pattern(pattern);
     }
+    if(ByteArrayProperty.isType(type, format)){
+      property = new ByteArrayProperty();
+    }
     // general properties
     if(property != null) {
       property
